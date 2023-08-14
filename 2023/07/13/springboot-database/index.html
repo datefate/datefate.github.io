@@ -4,10 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mysql realiteFile, datefate&#39;s website">
-    <meta name="description" content="查看和修改 MySQL数据库的最大连接数1、查看最大连接数：show variables like &amp;#39;%max_connections%&amp;#39;;
+    <meta name="keywords" content="Spring官网文档中介绍的数据库部分, datefate&#39;s website">
+    <meta name="description" content="Start官网参考资料
+Data
 
-2、修改最大连接数永久, 打开MySQL配置文件 my.ini 或 my.cnf">
+SpringBoot reference  how to : Database Initialization
+
+Using H2’s Web Console
+
+
+“How-to” Guides  Embe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mysql realiteFile | datefate&#39;s website</title>
+    <title>Spring官网文档中介绍的数据库部分 | datefate&#39;s website</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -227,12 +233,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mysql realiteFile</h1>
+                    <h1 class="description center-align post-title">Spring官网文档中介绍的数据库部分</h1>
                 </div>
             </div>
         </div>
@@ -256,27 +262,18 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Mysql/">
-                                <span class="chip bg-color">Mysql</span>
-                            </a>
-                        
                             <a href="/tags/Database/">
                                 <span class="chip bg-color">Database</span>
+                            </a>
+                        
+                            <a href="/tags/Learn/">
+                                <span class="chip bg-color">Learn</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                数据库
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -285,7 +282,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-06-04
+                    2023-07-13
                 </div>
                 
 
@@ -309,15 +306,121 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="查看和修改-MySQL数据库的最大连接数"><a href="#查看和修改-MySQL数据库的最大连接数" class="headerlink" title="查看和修改 MySQL数据库的最大连接数"></a>查看和修改 MySQL数据库的最大连接数</h3><h4 id="1、查看最大连接数："><a href="#1、查看最大连接数：" class="headerlink" title="1、查看最大连接数："></a>1、查看最大连接数：</h4><pre class="line-numbers language-none"><code class="language-none">show variables like &#39;%max_connections%&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><p>官网参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data">Data</a></p>
+<ul>
+<li><p>SpringBoot reference  how to : <a href="">Database Initialization</a></p>
+</li>
+<li><p>Using H2’s Web Console</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto">“How-to” Guides</a>  Embedded Servers, Data Access,</p>
+<h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><ul>
+<li><input disabled="" type="checkbox"> 数据事务回顾整理</li>
+<li><input disabled="" type="checkbox"> JPA 的细节</li>
+<li><input disabled="" type="checkbox"> Mybatis的配合</li>
+<li><input disabled="" type="checkbox"> Docker 中数据的初始化配置</li>
+</ul>
+<h2 id="按需"><a href="#按需" class="headerlink" title="按需"></a>按需</h2><ul>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/data.html#data.sql.h2-web-console.spring-security">Accessing the H2 Console in a Secured Application</a>  ( 关与spring Security 方面的，需要再看)</li>
+</ul>
+<h2 id="Ongoing"><a href="#Ongoing" class="headerlink" title="Ongoing"></a>Ongoing</h2><h1 id="knowledge"><a href="#knowledge" class="headerlink" title="knowledge"></a>knowledge</h1><h2 id="Overall"><a href="#Overall" class="headerlink" title="Overall"></a>Overall</h2><p>官方文档对那个h2数据库的介绍</p>
+<ul>
+<li>只需要添加H2的依赖和s<code>pring-jdbc</code>，不需要配置url，并可以通过浏览器地址访问。</li>
+</ul>
+<p>生产数据库的使用</p>
+<ul>
+<li>使用相关的数据库，spring根据 <code>url</code> 自动推断使用的驱动（支持大部分,前提是提供了驱动），依据[推断算法](#Supported Connection Pools) 设置连接池</li>
+<li>定制化驱动类，使用<code>spring.datasource.driver-class-name</code></li>
+<li><code>Sring-boot-starter-jdbc</code> or <code>spring-boot-starter-data-jpa</code> 自动获得 <code>HikariCP</code></li>
+</ul>
+<h2 id="相关包和概念"><a href="#相关包和概念" class="headerlink" title="相关包和概念"></a>相关包和概念</h2><p>JPA and Spring Data JPA ：JPA  是标准，Spring Data JPA是spring的包，解释看英文更容易理解</p>
+<ul>
+<li><p>Java Persistence API is a standard technology that lets you “map” objects to relational databases。</p>
+</li>
+<li><p><code>spring-boot-starter-data-jpa</code>  provide:</p>
+<ul>
+<li>Hibernate: One of the most popular JPA implementations.</li>
+<li>Spring Data JPA: Helps you to implement JPA-based repositories.</li>
+<li>Spring ORM: Core ORM support from the Spring Framework.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Process"><a href="#Process" class="headerlink" title="Process"></a>Process</h1><h2 id="嵌入式数据库"><a href="#嵌入式数据库" class="headerlink" title="嵌入式数据库"></a>嵌入式数据库</h2><p>仅作为开发使用</p>
+<blockquote>
+<p>Spring Boot can auto-configure embedded <a target="_blank" rel="noopener" href="https://www.h2database.com/">H2</a>, <a target="_blank" rel="noopener" href="https://hsqldb.org/">HSQL</a>, and <a target="_blank" rel="noopener" href="https://db.apache.org/derby/">Derby</a> databases. You need not provide any connection URLs.</p>
+<p>need only include a build dependency to the embedded database that you want to use. </p>
+<p>You need a dependency on <code>spring-jdbc</code> for an embedded database to be auto-configured. In this example, it is pulled in transitively through <code>spring-boot-starter-data-jpa</code>.</p>
+</blockquote>
+<p>只需要配置添加依赖就可以使用，springboot已经自动配置了。但依赖一个jdbc初始化，官网给出的依赖例子如下：</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-data-jpa<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.hsqldb<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>hsqldb<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">></span></span>runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="2、修改最大连接数"><a href="#2、修改最大连接数" class="headerlink" title="2、修改最大连接数"></a>2、修改最大连接数</h4><p>永久, 打开MySQL配置文件 my.ini 或 my.cnf，查找</p>
-<pre class="line-numbers language-none"><code class="language-none">max_connections&#x3D;100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>按照官网的例子，配置好，启动SpringBoot，输出中包括以下内容，可以看到自动配置的h2 数据库路径为 &#x2F;h2-console,  给出的url</p>
+<pre class="line-numbers language-none"><code class="language-none">NFO 12228 --- [  restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at &#39;&#x2F;h2-console&#39;. Database available at &#39;jdbc:h2:mem:60ab62bd-fb36-4ea2-9935-fd29b7b86dcd&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p>临时，命令行修改</p>
-<pre class="line-numbers language-none"><code class="language-none">MySQL&gt; set global max_connections&#x3D;100<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>myPictureTest<br><img src="/2023/06/04/JavaInterview/20190810142838.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pC9LcPf"><img src="https://s1.ax1x.com/2023/06/04/pC9LcPf.png" alt="并行"></a><br><a target="_blank" rel="noopener" href="https://imgse.com/i/pC9LyIP"><img src="https://s1.ax1x.com/2023/06/04/pC9LyIP.png" alt="并发"></a></p>
+<p>浏览器其访问<a target="_blank" rel="noopener" href="http://localhost:8080/h2-console/%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%99%BB%E5%BD%95%E4%BC%9A%E5%BE%97%E5%88%B0%E9%94%99%E8%AF%AF%E7%9A%84%E6%8F%90%E7%A4%BA%EF%BC%8C%E5%BE%97%E8%BE%93%E5%85%A5%E4%B8%8A%E9%9D%A2%E8%BE%93%E5%87%BA%E7%9A%84url%E5%9C%B0%E5%9D%80">http://localhost:8080/h2-console/，直接登录会得到错误的提示，得输入上面输出的url地址</a></p>
+<p><img src="/2023/07/13/springboot-database/h2-webconsole.png"></p>
+<h2 id="生产数据库"><a href="#生产数据库" class="headerlink" title="生产数据库"></a>生产数据库</h2><p>配置以<code>spring.datasource.*</code> 开头，不同的连接池使用的后缀不一样。如果使用<code>Hikari</code>, 配置的前缀就是<code> spring.datasource.hikari.*</code>，具体的详细配置spring文档上并不会有，得自己查看官方的文档（毕竟这只是<code>springboot</code>的文档）。</p>
+<p> spring 自动从<code>url</code>推断 <code>JDBC driver class </code> (支持大部分)，   具体可以 设置<code>spring.datasource.driver-class-name</code> property.</p>
+<pre class="line-numbers language-none"><code class="language-none">spring:
+  datasource:
+    url: &quot;jdbc:mysql:&#x2F;&#x2F;localhost&#x2F;test&quot;
+    username: &quot;dbuser&quot;
+    password: &quot;dbpass&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Supported-Connection-Pools"><a href="#Supported-Connection-Pools" class="headerlink" title="Supported Connection Pools"></a>Supported Connection Pools</h3><p><code>Sring-boot-starter-jdbc</code> or <code>spring-boot-starter-data-jpa</code> 自动获得 <code>HikariCP</code></p>
+<p>Spring Boot uses the following algorithm for choosing a specific implementation:</p>
+<ol>
+<li>We prefer <a target="_blank" rel="noopener" href="https://github.com/brettwooldridge/HikariCP">HikariCP</a> for its performance and concurrency. If HikariCP is available, we always choose it.</li>
+<li>Otherwise, if the Tomcat pooling <code>DataSource</code> is available, we use it.</li>
+<li>Otherwise, if <a target="_blank" rel="noopener" href="https://commons.apache.org/proper/commons-dbcp/">Commons DBCP2</a> is available, we use it.</li>
+<li>If none of HikariCP, Tomcat, and DBCP2 are available and if Oracle UCP is available, we use it.</li>
+</ol>
+<h3 id="你知道配置数据库连接池的几种方法吗？"><a href="#你知道配置数据库连接池的几种方法吗？" class="headerlink" title="你知道配置数据库连接池的几种方法吗？"></a>你知道配置数据库连接池的几种方法吗？</h3><p>不做介绍，可以查看 <a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-access">官网这一部分介绍</a>，只是用不同的方式实现Bean。比如如何在两个数据库中选择</p>
+<h2 id="数据库数据初始化"><a href="#数据库数据初始化" class="headerlink" title="数据库数据初始化"></a><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto.data-initialization">数据库数据初始化</a></h2><p>读取classpath下的名为data.sql 和schema.sql 文件具体化可以在配置文件中设置，见代码，通过sql脚本的方式实现。</p>
+<p>spring 有多种方式初始化数据库，details见官网how-to</p>
+<h2 id="参考配置"><a href="#参考配置" class="headerlink" title="参考配置"></a>参考配置</h2><pre class="line-numbers language-none"><code class="language-none"># 数据源配置
+spring.datasource.url&#x3D;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;wj?characterEncoding&#x3D;UTF-8&amp;serverTimezone&#x3D;GMT%2B8
+spring.datasource.username&#x3D;root
+spring.datasource.password&#x3D;Admin123!
+spring.datasource.driver-class-name&#x3D;com.mysql.cj.jdbc.Driver
+
+# 每次运行时初始化数据库，如不需要可以注释掉
+spring.datasource.initialization-mode&#x3D;always
+# 将 hibernate 的自动注入属性设置为 none（防止冲突，上面已经使用了 spring 的注入方法）
+spring.jpa.hibernate.ddl-auto&#x3D;none
+
+# 打印 sql 语句
+spring.jpa.properties.hibernate.show_sql&#x3D;true
+#spring.jpa.properties.hibernate.format_sql&#x3D;true
+
+##  Hikari 连接池配置
+## 最小空闲连接数量
+spring.datasource.hikari.minimum-idle&#x3D;5
+## 空闲连接存活最大时间，默认600000（10分钟）
+spring.datasource.hikari.idle-timeout&#x3D;180000
+## 连接池最大连接数，默认是10
+spring.datasource.hikari.maximum-pool-size&#x3D;10
+## 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+spring.datasource.hikari.auto-commit&#x3D;true
+## 连接池名
+spring.datasource.hikari.pool-name&#x3D;WJHikariCP
+## 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+spring.datasource.hikari.max-lifetime&#x3D;1800000
+## 数据库连接超时时间,默认30秒，即30000
+spring.datasource.hikari.connection-timeout&#x3D;30000
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -344,7 +447,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/06/04/JavaInterview/">http://example.com/2023/06/04/JavaInterview/</a>
+                    <a href="http://example.com/2023/07/13/springboot-database/">http://example.com/2023/07/13/springboot-database/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -382,12 +485,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Mysql/">
-                                    <span class="chip bg-color">Mysql</span>
-                                </a>
-                            
                                 <a href="/tags/Database/">
                                     <span class="chip bg-color">Database</span>
+                                </a>
+                            
+                                <a href="/tags/Learn/">
+                                    <span class="chip bg-color">Learn</span>
                                 </a>
                             
                         </div>
@@ -433,9 +536,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/07/13/springboot-database/">
                     <div class="card-image">
@@ -453,9 +557,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -464,6 +568,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -483,7 +588,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2023/06/04/JavaInterview/">
@@ -517,7 +622,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
